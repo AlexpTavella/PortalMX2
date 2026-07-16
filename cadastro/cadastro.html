@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ficha de inscrição de piloto - PortalMX">
+    <meta name="author" content="PortalMX">
+
+    <title>Cadastro de Piloto | PortalMX</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME ICONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- Barra superior -->
+
+    <div class="voltar">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-chevron-left"></i>
+            Voltar
+        </a>
+    </div>
+
+
+    <!-- Card principal -->
+
+    <div class="cadastro-wrapper">
+        <div class="cadastro-card">
+
+            <!-- LOGIN -->
+
+            <section id="login" class="conteudo ativo">
+
+                <!-- Tabs -->
+
+                <div class="cadastro-tabs">
+                    <div class="tabs-track">
+                        <button class="tab-button active" onclick="mostrarSection('login')">
+                            Login
+                        </button>
+                        <button class="tab-button" onclick="mostrarSection('cadastro')">
+                            Cadastro
+                        </button>
+                    </div>
+                </div>
+
+            <h2 class="form-title">
+                <i class="fa-solid fa-file-lines"></i>
+                Login
+            </h2>
+
+            <div class="input-group">
+                <label>E-mail <span class="required">*</span></label>
+                <input type="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="input-group">
+                <label>Senha <span class="required">*</span></label>
+                <input type="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-clear" id="btnLimpar">
+                    Limpar
+                </button>
+                <button type="submit" class="btn-yellow">
+                    Logar
+                </button>
+            </div>
+            </section>
+
+
+            <!-- Cadastro -->
+             
+            <!-- Foto do piloto -->
+
+            <section id="cadastro" class="conteudo">
+
+                <div class="cadastro-tabs">
+                    <div class="tabs-track">
+                        <button class="tab-button" onclick="mostrarSection('login')">
+                            Login
+                        </button>
+                        <button class="tab-button active" onclick="mostrarSection('cadastro')">
+                            Cadastro
+                        </button>
+                    </div>
+                </div>
+
+
+
+            <div class="photo-upload">
+
+                <label class="photo-circle" for="pilotPhoto">
+                    <img id="photoPreview" alt="" style="display:none;">
+                    <div class="photo-placeholder" id="photoPlaceholder">
+                        <i class="fa-solid fa-user"></i>
+                        <span>SELECIONE</span>
+                    </div>
+                    <span class="photo-camera-btn">
+                        <i class="fa-solid fa-camera"></i>
+                    </span>
+                </label>
+                <input type="file" id="pilotPhoto" accept="image/png, image/jpeg, image/jpg" hidden>
+
+                <h3>Foto Oficial do Piloto *</h3>
+                <p>Obrigatória. Formatos aceitos: JPG, JPEG, PNG.</p>
+
+            </div>
+
+            <h2 class="form-title">
+                <i class="fa-solid fa-file-lines"></i>
+                Ficha de Inscrição Motocross
+            </h2>
+
+            <form id="cadastroForm" novalidate>
+
+                <!-- Dados principais -->
+
+                <div class="form-section">
+
+                    <p class="form-section-title">Dados Principais</p>
+
+                    <div class="input-group">
+                        <label>Nome Completo <span class="required">*</span></label>
+                        <input type="text" name="nomeCompleto" placeholder="Nome e Sobrenome" required>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label>CPF <span class="required">*</span></label>
+                            <input type="text" name="cpf" placeholder="000.000.000-00" inputmode="numeric"
+                                maxlength="14" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Data de Nascimento <span class="required">*</span></label>
+                            <input type="date" name="dataNascimento" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label>E-mail <span class="required">*</span></label>
+                            <input type="email" name="email" placeholder="exemplo@email.com" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Telefone <span class="required">*</span></label>
+                            <input type="tel" name="telefone" placeholder="(00) 00000-0000" inputmode="numeric"
+                                maxlength="15" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label>Categoria <span class="required">*</span></label>
+                            <select name="categoria" required>
+                                <option value="" selected disabled hidden></option>
+                                <option value="mirim">50cc — Mirim</option>
+                                <option value="infantil">65cc — Infantil</option>
+                                <option value="junior">85cc — Júnior</option>
+                                <option value="amador">Amador</option>
+                                <option value="intermediaria">Intermediária</option>
+                                <option value="pro">Pro / Elite</option>
+                                <option value="veteranos">Veteranos (+35)</option>
+                                <option value="feminina">Feminina</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Nº Licença CBM <span class="optional">(Opcional)</span></label>
+                            <input type="text" name="licencaCbm" placeholder="CBM-00000">
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label>Equipe <span class="optional">(Opcional)</span></label>
+                            <input type="text" name="equipe" placeholder="Nome da Equipe">
+                        </div>
+
+                        <div class="input-group">
+                            <label>País <span class="required">*</span></label>
+                            <input type="text" name="pais" value="Brasil" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label>Estado (UF) <span class="required">*</span></label>
+                            <select name="estado" required>
+                                <option value="" disabled hidden>Selecione</option>
+                                <option value="AC">Acre (AC)</option>
+                                <option value="AL">Alagoas (AL)</option>
+                                <option value="AP">Amapá (AP)</option>
+                                <option value="AM">Amazonas (AM)</option>
+                                <option value="BA">Bahia (BA)</option>
+                                <option value="CE">Ceará (CE)</option>
+                                <option value="DF">Distrito Federal (DF)</option>
+                                <option value="ES">Espírito Santo (ES)</option>
+                                <option value="GO">Goiás (GO)</option>
+                                <option value="MA">Maranhão (MA)</option>
+                                <option value="MT">Mato Grosso (MT)</option>
+                                <option value="MS">Mato Grosso do Sul (MS)</option>
+                                <option value="MG">Minas Gerais (MG)</option>
+                                <option value="PA">Pará (PA)</option>
+                                <option value="PB">Paraíba (PB)</option>
+                                <option value="PR">Paraná (PR)</option>
+                                <option value="PE">Pernambuco (PE)</option>
+                                <option value="PI">Piauí (PI)</option>
+                                <option value="RJ">Rio de Janeiro (RJ)</option>
+                                <option value="RN">Rio Grande do Norte (RN)</option>
+                                <option value="RS">Rio Grande do Sul (RS)</option>
+                                <option value="RO">Rondônia (RO)</option>
+                                <option value="RR">Roraima (RR)</option>
+                                <option value="SC">Santa Catarina (SC)</option>
+                                <option value="SP" selected>São Paulo (SP)</option>
+                                <option value="SE">Sergipe (SE)</option>
+                                <option value="TO">Tocantins (TO)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Cidade <span class="required">*</span></label>
+                            <input type="text" name="cidade" placeholder="Sua Cidade" required>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Informações de emergência -->
+
+                <div class="form-section">
+
+                    <p class="form-section-title">Informações de Emergência</p>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label>Nome do Contato <span class="required">*</span></label>
+                            <input type="text" name="contatoNome" placeholder="Nome do Responsável/Contato" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Telefone do Contato <span class="required">*</span></label>
+                            <input type="tel" name="contatoTelefone" placeholder="(00) 00000-0000"
+                                inputmode="numeric" maxlength="15" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label>Grau de Parentesco <span class="required">*</span></label>
+                            <input type="text" name="parentesco" placeholder="Mãe, Pai, Cônjuge..." required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Tipo Sanguíneo <span class="optional">(Se souber)</span></label>
+                            <select name="tipoSanguineo">
+                                <option value="" selected>Não sei</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Observações -->
+
+                <div class="form-section">
+
+                    <div class="textarea-counter">
+                        <p class="form-section-title" style="margin-bottom:0;">Observações Gerais</p>
+                        <span id="charCounter">500 caracteres restantes</span>
+                    </div>
+
+                    <div class="input-group" style="margin-bottom:0;">
+                        <textarea name="observacoes" maxlength="500"
+                            placeholder="Alguma restrição alimentar, alergias ou observações médicas de relevância..."></textarea>
+                    </div>
+
+                </div>
+
+
+                <!-- Documentação -->
+
+                <div class="form-section">
+
+                    <p class="form-section-title">Documentação e Anexos Requeridos</p>
+
+                    <div class="form-row">
+
+                        <div>
+                            <div class="upload-group-header">
+                                <label>Comprovante de RG/CPF <span class="required">*</span></label>
+                            </div>
+                            <label class="upload-box" for="uploadRg">
+                                <i class="fa-solid fa-upload"></i>
+                                <strong>Anexar RG/CPF</strong>
+                                <small>Formatos: PDF, JPG, PNG até 5MB</small>
+                            </label>
+                            <input type="file" id="uploadRg" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                        </div>
+
+                        <div>
+                            <div class="upload-group-header">
+                                <label>Termo de Responsabilidade <span class="required">*</span></label>
+                            </div>
+                            <label class="upload-box" for="uploadTermo">
+                                <i class="fa-solid fa-upload"></i>
+                                <strong>Anexar Termo</strong>
+                                <small>Formatos: PDF, JPG, PNG até 5MB</small>
+                            </label>
+                            <input type="file" id="uploadTermo" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                        </div>
+
+                    </div>
+
+                    <div class="info-box" id="idadeInfoBox">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span id="idadeInfoText">
+                            Preencha sua data de nascimento acima para obter as orientações detalhadas de assinatura
+                            do termo regulamentar.
+                        </span>
+                    </div>
+
+                    <div class="form-row" style="margin-top:28px;">
+
+                        <div>
+                            <div class="upload-group-header">
+                                <label>CNH / Carteira de Habilitação</label>
+                                <span class="upload-badge required">Obrigatória</span>
+                            </div>
+                            <label class="upload-box" for="uploadCnh">
+                                <i class="fa-solid fa-upload"></i>
+                                <strong>Anexar CNH</strong>
+                                <small>Formatos: PDF, JPG, PNG até 5MB</small>
+                            </label>
+                            <input type="file" id="uploadCnh" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                        </div>
+
+                        <div>
+                            <div class="upload-group-header">
+                                <label>Licença Esportiva CBM</label>
+                                <span class="upload-badge optional">Opcional</span>
+                            </div>
+                            <label class="upload-box" for="uploadCbm">
+                                <i class="fa-solid fa-upload"></i>
+                                <strong>Anexar Licença CBM</strong>
+                                <small>Formatos: PDF, JPG, PNG até 5MB</small>
+                            </label>
+                            <input type="file" id="uploadCbm" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Ações -->
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-yellow">
+                        Salvar Inscrição e Ir para Pagamento
+                    </button>
+                    <button type="button" class="btn-clear" id="btnLimpar" disabled>
+                        Limpar
+                    </button>
+                    <a href="portal.html" class="btn-cancel">
+                        Cancelar
+                    </a>
+                </div>
+
+            </section>
+
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        "use strict";
+
+        function mostrarSection(id){
+
+        // Esconde todas
+        const sections = document.querySelectorAll(".conteudo");
+
+        sections.forEach(section => {
+            section.classList.remove("ativo");
+        });
+
+        // Mostra apenas a escolhida
+        document.getElementById(id).classList.add("ativo");
+        }
+
+        /* ==========================================================
+            TOAST
+        ========================================================== */
+
+        const Toast = {
+            container: null,
+            init() {
+                this.container = document.createElement("div");
+                this.container.id = "toast-container";
+                document.body.appendChild(this.container);
+            },
+            show(message, type = "success") {
+                if (!this.container) this.init();
+
+                const toast = document.createElement("div");
+                toast.className = `toast ${type}`;
+                toast.innerHTML = `
+                    <div class="toast-icon"><i class="fa-solid ${type === "success" ? "fa-circle-check" : "fa-triangle-exclamation"}"></i></div>
+                    <div class="toast-message">${message}</div>
+                `;
+                this.container.appendChild(toast);
+
+                setTimeout(() => toast.classList.add("show"), 50);
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                    setTimeout(() => toast.remove(), 300);
+                }, 3500);
+            }
+        };
+        Toast.init();
+
+        /* ==========================================================
+            MÁSCARAS (CPF e Telefone)
+        ========================================================== */
+
+        function maskCPF(value) {
+            return value
+                .replace(/\D/g, "")
+                .slice(0, 11)
+                .replace(/(\d{3})(\d)/, "$1.$2")
+                .replace(/(\d{3})(\d)/, "$1.$2")
+                .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        }
+
+        function maskPhone(value) {
+            return value
+                .replace(/\D/g, "")
+                .slice(0, 11)
+                .replace(/(\d{2})(\d)/, "($1) $2")
+                .replace(/(\d{5})(\d{1,4})$/, "$1-$2");
+        }
+
+        const cpfInput = document.querySelector('[name="cpf"]');
+        cpfInput.addEventListener("input", function () {
+            cpfInput.value = maskCPF(cpfInput.value);
+        });
+
+        document.querySelectorAll('input[name="telefone"], input[name="contatoTelefone"]').forEach(function (input) {
+            input.addEventListener("input", function () {
+                input.value = maskPhone(input.value);
+            });
+        });
+
+        /* ==========================================================
+            FOTO DO PILOTO
+        ========================================================== */
+
+        const pilotPhoto = document.getElementById("pilotPhoto");
+        const photoPreview = document.getElementById("photoPreview");
+        const photoPlaceholder = document.getElementById("photoPlaceholder");
+
+        pilotPhoto.addEventListener("change", function () {
+            const file = pilotPhoto.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                photoPreview.src = e.target.result;
+                photoPreview.style.display = "block";
+                photoPlaceholder.style.display = "none";
+            };
+            reader.readAsDataURL(file);
+        });
+
+        /* ==========================================================
+            CAIXAS DE UPLOAD DE DOCUMENTOS
+        ========================================================== */
+
+        document.querySelectorAll('.upload-box input[type="file"]').forEach(function (input) {
+            input.addEventListener("change", function () {
+                const box = input.closest("label.upload-box") || document.querySelector(`label[for="${input.id}"]`);
+                const file = input.files[0];
+                if (!file || !box) return;
+
+                box.classList.add("has-file");
+                box.querySelector("i").className = "fa-solid fa-circle-check";
+                box.querySelector("strong").textContent = file.name.length > 24
+                    ? file.name.slice(0, 21) + "..."
+                    : file.name;
+            });
+        });
+
+        /* ==========================================================
+            CONTADOR DE CARACTERES DAS OBSERVAÇÕES
+        ========================================================== */
+
+        const observacoes = document.querySelector('textarea[name="observacoes"]');
+        const charCounter = document.getElementById("charCounter");
+
+        observacoes.addEventListener("input", function () {
+            const remaining = 500 - observacoes.value.length;
+            charCounter.textContent = remaining + " caracteres restantes";
+        });
+
+        /* ==========================================================
+            ORIENTAÇÃO SOBRE MENOR DE IDADE (data de nascimento)
+        ========================================================== */
+
+        const dataNascimento = document.querySelector('[name="dataNascimento"]');
+        const idadeInfoBox = document.getElementById("idadeInfoBox");
+        const idadeInfoText = document.getElementById("idadeInfoText");
+
+        dataNascimento.addEventListener("change", function () {
+            if (!dataNascimento.value) return;
+
+            const nascimento = new Date(dataNascimento.value);
+            const hoje = new Date();
+            let idade = hoje.getFullYear() - nascimento.getFullYear();
+            const aindaNaoFezAniversario =
+                hoje.getMonth() < nascimento.getMonth() ||
+                (hoje.getMonth() === nascimento.getMonth() && hoje.getDate() < nascimento.getDate());
+            if (aindaNaoFezAniversario) idade--;
+
+            idadeInfoBox.classList.remove("alert", "ok");
+
+            if (idade < 18) {
+                idadeInfoBox.classList.add("alert");
+                idadeInfoText.textContent =
+                    "Piloto menor de idade: o Termo de Responsabilidade deve ser assinado pelo responsável legal e anexado junto com um documento de identificação.";
+            } else {
+                idadeInfoBox.classList.add("ok");
+                idadeInfoText.textContent =
+                    "Piloto maior de idade: o Termo de Responsabilidade deve ser assinado pelo próprio piloto.";
+            }
+        });
+
+        /* ==========================================================
+            BOTÃO LIMPAR (habilita quando há dados no formulário)
+        ========================================================== */
+
+        const cadastroForm = document.getElementById("cadastroForm");
+        const btnLimpar = document.getElementById("btnLimpar");
+
+        function checkFormFilled() {
+            const hasValue = Array.from(cadastroForm.elements).some(function (el) {
+                if (el.type === "file") return el.files && el.files.length > 0;
+                if (el.name === "pais") return false;
+                return el.value && el.value.trim() !== "";
+            });
+            btnLimpar.disabled = !hasValue;
+            btnLimpar.classList.toggle("enabled", hasValue);
+        }
+
+        cadastroForm.addEventListener("input", checkFormFilled);
+        cadastroForm.addEventListener("change", checkFormFilled);
+
+        btnLimpar.addEventListener("click", function () {
+            if (btnLimpar.disabled) return;
+
+            cadastroForm.reset();
+            photoPreview.style.display = "none";
+            photoPlaceholder.style.display = "flex";
+            charCounter.textContent = "500 caracteres restantes";
+            idadeInfoBox.classList.remove("alert", "ok");
+            idadeInfoText.textContent =
+                "Preencha sua data de nascimento acima para obter as orientações detalhadas de assinatura do termo regulamentar.";
+
+            document.querySelectorAll(".upload-box").forEach(function (box) {
+                box.classList.remove("has-file");
+                box.querySelector("i").className = "fa-solid fa-upload";
+            });
+            document.getElementById("uploadRg").closest("div").querySelector("strong").textContent = "Anexar RG/CPF";
+            document.getElementById("uploadTermo").closest("div").querySelector("strong").textContent = "Anexar Termo";
+            document.getElementById("uploadCnh").closest("div").querySelector("strong").textContent = "Anexar CNH";
+            document.getElementById("uploadCbm").closest("div").querySelector("strong").textContent = "Anexar Licença CBM";
+
+            checkFormFilled();
+            Toast.show("Formulário limpo.");
+        });
+
+        /* ==========================================================
+            ENVIO DO FORMULÁRIO
+        ========================================================== */
+
+        cadastroForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let valid = true;
+            let firstInvalid = null;
+
+            cadastroForm.querySelectorAll("[required]").forEach(function (field) {
+                const filled = field.value && field.value.trim() !== "";
+                field.classList.toggle("field-error", !filled);
+                if (!filled) {
+                    valid = false;
+                    if (!firstInvalid) firstInvalid = field;
+                }
+            });
+
+            const requiredUploads = ["uploadRg", "uploadTermo", "uploadCnh"];
+            requiredUploads.forEach(function (id) {
+                const input = document.getElementById(id);
+                const box = document.querySelector(`label[for="${id}"]`);
+                const filled = input.files && input.files.length > 0;
+                box.classList.toggle("field-error", !filled);
+                if (!filled) valid = false;
+            });
+
+            if (!pilotPhoto.files || pilotPhoto.files.length === 0) {
+                Toast.show("A foto oficial do piloto é obrigatória.", "error");
+                valid = false;
+            }
+
+            if (!valid) {
+                Toast.show("Preencha todos os campos obrigatórios.", "error");
+                if (firstInvalid) firstInvalid.focus();
+                return;
+            }
+
+            Toast.show("Inscrição salva! Redirecionando para o pagamento...");
+            // Aqui entraria o redirecionamento real, ex:
+            // window.location.href = "pagamento.html";
+        });
+    </script>
+
+</body>
+
+</html>

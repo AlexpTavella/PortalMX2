@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal Oficial de Eventos Off Road">
+    <meta name="keywords" content="Motocross, Enduro, Velocross, Trilha, Eventos">
+    <meta name="author" content="PortalMX">
+    <title>PortalMX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"rel="stylesheet">
+    
+    <!-- FONT AWESOME ICONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Loader ao iniciar a página // Opcional
+
+    <div id="loader">
+        <div class="loader-logo">
+            <img src="assets/img/logo-icon.png" alt="PortalMX">
+        </div>
+        <div class="loader-bar">
+            <span></span>
+        </div>
+    </div> -->
+
+
+    <!-- Barra de progresso acima do Header Opcional // Opcional -->
+
+    <div id="scroll-progress"></div>
+
+    <!-- Header do site -->
+
+    <header id="header">
+        <div class="container">
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+                <span class="logo-tag"><i class="fas fa-map-marker-alt"></i></span>
+                <span class="logo-name">PortalMX</span>
+            </a>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#home" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="#eventos">Eventos</a>
+                    </li>
+                    <li>
+                        <a href="#galeria">Galeria</a>
+                    </li>
+                    <li>
+                        <a href="#indicacoes">Indicamos</a>
+                    </li>
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons">
+                <a href="cadastro/cadastro.html" class="btn-yellow">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    Login Piloto 
+                </a>
+
+                <!-- <a href="admin/login.html" class="btn-dark">
+                    <i class="fa-regular fa-user"></i>
+                    Login Admin
+                </a> -->
+
+                <a href="perfil/perfil.html" class="btn-dark">
+                    <i class="fa-regular fa-user"></i>
+                    Perfil Piloto
+                </a>
+
+
+            </div>
+
+            <button id="mobile-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Menu para celular -->
+
+    <aside id="mobile-menu">
+        <button id="close-menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#indicacoes">Indicamos</a>
+            <a href="#contato">Contato</a>
+            <hr>
+            <a href="cad/cadastro.html">Login Piloto</a>
+            <a href="admin/login.html">Login Admin</a>
+
+        </nav>
+
+    </aside>
+
+    <!-- --------- HERO --------- -->
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+
+        <img src="imgs/foto 1.png" alt="Motocross" class="hero-bg">
+
+        <div class="container hero-container">
+            <div class="hero-left">
+
+                <div class="status-badge"><span></span>
+                    INSCRIÇÕES ABERTAS
+                </div>
+
+                <h1>CAMPEONATO PAULISTA DE MOTOCROSS</h1>
+                <p>Etapa oficial com cadastro digital, pagamento PIX e homologação automática de documentos.</p>
+
+                <div class="hero-info">
+                    <div>
+                        <small>DATA</small>
+                        <strong>30/08/2026</strong>
+                    </div>
+                    <div>
+                        <small>LOCAL</small>
+                        <strong>MOTÓDROMO OFICIAL</strong>
+                    </div>
+                    <div>
+                        <small>LARGADA</small>
+                        <strong>11:00H</strong>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="cadastro.html" class="btn-yellow">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        Inscrever-se
+                    </a>
+                    <a href="evento.html" class="btn-dark">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Ver Detalhes
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Barra de Pesquisa de eventos -->
+
+    <section class="search-section">
+        <div class="container">
+            <form class="search-box" id="searchForm">
+
+                <div class="search-group">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Evento ou modalidade...">
+                </div>
+
+                <div class="search-group">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Cidade ou Estado...">
+                </div>
+
+                <div class="search-group">
+                    <i class="fa-regular fa-calendar"></i>
+                    <input type="date">
+                </div>
+
+                <button type="submit" class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Evento em destaque  -->
+
+    <section class="featured-banner">
+
+        <div class="container">
+
+            <article class="featured-card">
+
+                <img src="imgs/Foto 2.png" alt="Evento Destaque">
+
+                <div class="featured-overlay"></div>
+
+                <div class="featured-content">
+                    <span>CAMPEONATO PAULISTA DE MOTOCROSS</span>
+                    <h2>2ª ETAPA PORANGABA - INSCRIÇÕES ABERTAS</h2>
+                    <p>Garanta sua vaga na próxima disputa do campeonato mais acelerado do estado de São Paulo.</p>
+                    
+                    <a href="evento.html" class="btn-yellow">Acessar Inscrição</a>
+                </div>
+
+                <div class="featured-pagination">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </article>
+        </div>
+    </section>
+
+    <!-- MODALIDADES -->
+
+    <section class="categories-section">
+        <div class="container">
+
+            <div class="section-title">
+                <span></span>
+                <h2>Modalidades</h2>
+            </div>
+
+            <div class="categories-grid">
+
+                <article class="category-card">
+                    <img src="imgs/foto 4.png" alt="Motocross">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-badge blue">MOTOCROSS</span>
+                        <h3>Motocross</h3>
+                        <small>Visualizar provas</small>
+                    </div>
+                </article>
+
+                <article class="category-card">
+                    <img src="imgs/foto 5.png" alt="Enduro">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-badge blue">ENDURO REGULARIDADE</span>
+                        <h3>Enduro</h3>
+                        <small>Visualizar provas</small>
+                    </div>
+                </article>
+
+                <article class="category-card">
+                    <img src="imgs/foto 6.png" alt="Velocidade">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-badge blue">MOTOVELOCIDADE</span>
+                        <h3>Motovelocidade</h3>
+                        <small>Visualizar provas</small>
+                    </div>
+                </article>
+
+                <article class="category-card active">
+                    <img src="imgs/foto 3.png" alt="Todos">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-badge">TODOS</span>
+                        <h3>Ver Tudo</h3>
+                        <small>Filtrar todos</small>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTOS  -->
+
+    <section id="eventos" class="events-section">
+        <div class="container">
+            <div class="section-title space-between">
+
+                <div class="title-left">
+                    <span></span>
+                    <h2>Eventos Disponíveis</h2>
+                </div>
+
+                <small>1 Evento Disponível</small>
+
+            </div>
+
+            <div class="events-grid">
+
+                <!-- Card de eventos -->
+
+                <article class="event-card">
+
+                    <div class="event-image">
+                        <span class="event-status">
+                            INSCRIÇÕES ABERTAS
+                        </span>
+                        <img src="imgs/foto 7.png" alt="Evento">
+                    </div>
+
+                    <div class="event-body">
+
+                        <small>
+
+                            CAMPEONATO PAULISTA
+
+                        </small>
+
+                        <h3>
+
+                            2ª ETAPA PORANGABA
+                            MX1 • MX2
+
+                        </h3>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                30/08/2026
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Porangaba - SP
+
+                            </li>
+
+                        </ul>
+
+                        <div class="event-buttons">
+
+                            <a href="cadastro.html" class="btn-yellow">
+
+                                Inscreva-se Já
+
+                            </a>
+
+                            <a href="evento.html" class="btn-dark">
+
+                                Ver Informações
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- ================================================= -->
+                <!-- Espaço reservado para eventos futuros carregados
+                     dinamicamente através do PHP/MySQL.
+                ================================================= -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- ESTATÍSTICAS -->
+    <!-- ========================================================= -->
+
+    <section class="stats">
+
+        <div class="container">
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h3>+<span data-counter="3250">0</span></h3>
+
+                    <span>
+
+                        Pilotos Cadastrados
+
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3><span data-counter="215">0</span></h3>
+
+                    <span>
+
+                        Eventos Organizados
+
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3><span data-counter="14">0</span></h3>
+
+                    <span>
+
+                        Modalidades
+
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3><span data-counter="11">0</span></h3>
+
+                    <span>
+
+                        Estados Atendidos
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ========================================================= -->
+    <!-- POR QUE ESCOLHER -->
+    <!-- ========================================================= -->
+
+    <section class="why-us">
+
+        <div class="container">
+
+            <div class="section-title center">
+
+                <span>
+
+                    Plataforma Completa
+
+                </span>
+
+                <h2>
+
+                    Tudo o que você precisa para participar dos eventos
+
+                </h2>
+
+                <p>
+
+                    Desenvolvemos uma plataforma moderna para facilitar a
+                    inscrição dos pilotos e o gerenciamento completo dos
+                    campeonatos.
+
+                </p>
+
+            </div>
+
+            <div class="why-grid">
+
+                <article class="why-card">
+
+                    <div class="why-icon">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Cadastro Digital
+
+                    </h3>
+
+                    <p>
+
+                        Realize todo o cadastro diretamente pelo site sem
+                        necessidade de formulários impressos.
+
+                    </p>
+
+                </article>
+
+                <article class="why-card">
+
+                    <div class="why-icon">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Documentos Online
+
+                    </h3>
+
+                    <p>
+
+                        Faça upload dos documentos obrigatórios com
+                        validação automática.
+
+                    </p>
+
+                </article>
+
+                <article class="why-card">
+
+                    <div class="why-icon">
+
+                        <i class="fa-solid fa-qrcode"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Pagamento PIX
+
+                    </h3>
+
+                    <p>
+
+                        Pagamento rápido com confirmação automática da
+                        inscrição.
+
+                    </p>
+
+                </article>
+
+                <article class="why-card">
+
+                    <div class="why-icon">
+
+                        <i class="fa-solid fa-trophy"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Eventos Oficiais
+
+                    </h3>
+
+                    <p>
+
+                        Acompanhe campeonatos oficiais e visualize todas
+                        as informações antes da prova.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- GALERIA -->
+    <!-- ========================================================= -->
+
+    <section id="galeria" class="gallery-section">
+
+        <div class="container">
+
+            <div class="section-title space-between">
+
+                <div>
+
+                    <span>
+
+                        Galeria
+
+                    </span>
+
+                    <h2>
+
+                        Últimos Eventos
+
+                    </h2>
+
+                </div>
+
+                <a href="#" class="btn-dark">
+
+                    Ver Todas
+
+                </a>
+
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+
+                    <img src="imgs/foto 8.png" alt="Evento">
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <img src="imgs/foto 9.png" alt="Evento">
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <img src="imgs/foto 10.png" alt="Evento">
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <img src="imgs/foto 11.png" alt="Evento">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- NOTÍCIAS -->
+    <!-- ========================================================= -->
+
+    <section class="news-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>
+
+                    Notícias
+
+                </span>
+
+                <h2>
+
+                    Últimas Atualizações
+
+                </h2>
+
+            </div>
+
+            <div class="news-grid">
+
+                <article class="news-card">
+
+                    <img src="imgs/foto 1.png" alt="Notícia">
+
+                    <div class="news-content">
+
+                        <small>
+
+                            15 JUL 2026
+
+                        </small>
+
+                        <h3>
+
+                            Campeonato Paulista confirma nova etapa.
+
+                        </h3>
+
+                        <a href="#">
+
+                            Ler Mais
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="news-card">
+
+                    <img src="imgs/foto 15.png" alt="Notícia">
+
+                    <div class="news-content">
+
+                        <small>
+
+                            08 JUL 2026
+
+                        </small>
+
+                        <h3>
+
+                            Novo regulamento disponível para download.
+
+                        </h3>
+
+                        <a href="#">
+
+                            Ler Mais
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="news-card">
+
+                    <img src="imgs/foto 4.png" alt="Notícia">
+
+                    <div class="news-content">
+
+                        <small>
+
+                            02 JUL 2026
+
+                        </small>
+
+                        <h3>
+
+                            Inscrições abertas para novas categorias.
+
+                        </h3>
+
+                        <a href="#">
+
+                            Ler Mais
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- PATROCINADORES -->
+    <!-- ========================================================= -->
+
+    <section id="indicacoes" class="partners">
+
+        <div class="container">
+
+            <div class="section-title center">
+
+                <span>
+
+                    Parceiros
+
+                </span>
+
+                <h2>
+
+                    Patrocinadores Oficiais
+
+                </h2>
+
+            </div>
+
+            <div class="partners-grid">
+
+                <img src="assets/img/brands/honda.png" alt="Honda">
+
+                <img src="assets/img/brands/yamaha.png" alt="Yamaha">
+
+                <img src="assets/img/brands/ktm.png" alt="KTM">
+
+                <img src="assets/img/brands/kawasaki.png" alt="Kawasaki">
+
+                <img src="assets/img/brands/redbull.png" alt="Red Bull">
+
+                <img src="assets/img/brands/alpinestars.png" alt="Alpinestars">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- CTA -->
+    <!-- ========================================================= -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-content">
+
+                <h2>
+
+                    Faça parte do próximo campeonato.
+
+                </h2>
+
+                <p>
+
+                    Realize sua inscrição online e acompanhe todas as
+                    etapas diretamente pela plataforma.
+
+                </p>
+
+                <a href="cadastro.html" class="btn-yellow">
+
+                    Inscrever Piloto
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ========================================================= -->
+    <!-- CONTATO -->
+    <!-- ========================================================= -->
+
+    <section id="contato" class="contact-section">
+
+        <div class="container">
+
+            <div class="contact-wrapper">
+
+                <div class="contact-left">
+
+                    <span>
+
+                        ENTRE EM CONTATO
+
+                    </span>
+
+                    <h2>
+
+                        Ficou com alguma dúvida?
+
+                    </h2>
+
+                    <p>
+
+                        Nossa equipe está pronta para ajudar você com inscrições,
+                        categorias, regulamentos, pagamentos e qualquer outra
+                        informação relacionada aos eventos.
+
+                    </p>
+
+                    <div class="contact-list">
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+
+                                    Telefone
+
+                                </strong>
+
+                                <span>
+
+                                    (15) 99999-9999
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+
+                                    E-mail
+
+                                </strong>
+
+                                <span>
+
+                                    contato@agendaoffroad.com.br
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+
+                                    Endereço
+
+                                </strong>
+
+                                <span>
+
+                                    São Paulo - Brasil
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ====================================== -->
+                <!-- FORM -->
+                <!-- ====================================== -->
+
+                <form class="contact-form" id="contactForm">
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Nome
+
+                        </label>
+
+                        <input type="text" name="name" placeholder="Digite seu nome">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            E-mail
+
+                        </label>
+
+                        <input type="email" name="email" placeholder="Digite seu e-mail">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Assunto
+
+                        </label>
+
+                        <input type="text" name="subject" placeholder="Assunto">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Mensagem
+
+                        </label>
+
+                        <textarea rows="6" name="message" placeholder="Digite sua mensagem"></textarea>
+
+                    </div>
+
+                    <button type="submit" class="btn-yellow">
+
+                        Enviar Mensagem
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- ============================== -->
+                <!-- EMPRESA -->
+                <!-- ============================== -->
+
+                <div class="footer-column">
+
+                    <h3>
+
+                        Agenda Off Road
+
+                    </h3>
+
+                    <p>
+
+                        Plataforma especializada no gerenciamento
+                        completo de eventos Off Road,
+                        Motocross, Enduro,
+                        Velocross e Trilhas.
+
+                    </p>
+
+                    <div class="social-icons">
+
+                        <a href="#">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="fab fa-youtube"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ============================== -->
+                <!-- LINKS -->
+                <!-- ============================== -->
+
+                <div class="footer-column">
+
+                    <h4>
+
+                        Navegação
+
+                    </h4>
+
+                    <a href="#home">
+
+                        Home
+
+                    </a>
+
+                    <a href="#eventos">
+
+                        Eventos
+
+                    </a>
+
+                    <a href="#galeria">
+
+                        Galeria
+
+                    </a>
+
+                    <a href="#indicacoes">
+
+                        Indicamos
+
+                    </a>
+
+                    <a href="#contato">
+
+                        Contato
+
+                    </a>
+
+                </div>
+
+                <!-- ============================== -->
+                <!-- PILOTO -->
+                <!-- ============================== -->
+
+                <div class="footer-column">
+
+                    <h4>
+
+                        Portal
+
+                    </h4>
+
+                    <a href="cadastro.html">
+
+                        Cadastrar Piloto
+
+                    </a>
+
+                    <a href="portal.html">
+
+                        Área do Piloto
+
+                    </a>
+
+                    <a href="#">
+
+                        Regulamento
+
+                    </a>
+
+                    <a href="#">
+
+                        Política de Privacidade
+
+                    </a>
+
+                </div>
+
+                <!-- ============================== -->
+                <!-- NEWSLETTER -->
+                <!-- ============================== -->
+
+                <div class="footer-column">
+
+                    <h4>
+
+                        Newsletter
+
+                    </h4>
+
+                    <p>
+
+                        Receba novos eventos
+                        diretamente em seu e-mail.
+
+                    </p>
+
+                    <form class="newsletter" id="newsletterForm">
+
+                        <input type="email" name="email" placeholder="Seu e-mail">
+
+                        <button type="submit">
+
+                            Inscrever
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 Agenda Off Road.
+
+                </p>
+
+                <p>
+
+                    Desenvolvido por ...
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ========================================================= -->
+    <!-- BACK TO TOP -->
+    <!-- ========================================================= -->
+
+    <button id="backToTop">
+
+        <i class="fa-solid fa-chevron-up"></i>
+
+    </button>
+
+    <!-- ========================================================= -->
+    <!-- SCRIPTS -->
+    <!-- ========================================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

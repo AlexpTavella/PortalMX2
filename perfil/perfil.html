@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil do piloto - Agenda Off Road">
+    <meta name="author" content="Agenda Off Road">
+
+    <title>Meu Perfil | Agenda Off Road</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME ICONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- Barra superior -->
+
+    <div class="voltar">
+
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-chevron-left"></i>
+            Voltar
+        </a>
+
+    </div>
+
+
+    <div class="perfil-container">
+
+        <!-- Cartão de perfil -->
+
+        <div class="perfil-hero">
+
+            <div class="perfil-avatar">
+                <img src="../imgs/Foto 1.png" alt="Foto do piloto">
+            </div>
+
+            <div class="perfil-info">
+
+                <div class="perfil-badges">
+                    <span class="badge success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Cadastro Ativo
+                    </span>
+                    <span class="badge warning">
+                        Categoria Amador
+                    </span>
+                </div>
+
+                <h1>Matheus Ferreira</h1>
+
+                <ul class="perfil-meta">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Cerquilho - SP
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-id-card"></i>
+                        Licença CBM-04821
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-users"></i>
+                        Equipe Racing 22
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Piloto desde 2023
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="perfil-hero-actions">
+                <a href="cadastro.html" class="btn-dark">
+                    <i class="fa-solid fa-pen"></i>
+                    Editar Perfil
+                </a>
+                <a href="#" class="btn-dark" id="logoutButton">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Sair
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Estatísticas rápidas -->
+
+        <div class="perfil-stats">
+
+            <div class="perfil-stat-card">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <h3 id="statInscritos">0</h3>
+                <span>Eventos Inscritos</span>
+            </div>
+
+            <div class="perfil-stat-card">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3 id="statConcluidos">0</h3>
+                <span>Eventos Concluídos</span>
+            </div>
+
+            <div class="perfil-stat-card">
+                <i class="fa-solid fa-trophy"></i>
+                <h3>3</h3>
+                <span>Pódios</span>
+            </div>
+
+            <div class="perfil-stat-card">
+                <i class="fa-solid fa-hourglass-half"></i>
+                <h3 id="statPendentes">0</h3>
+                <span>Pagamentos Pendentes</span>
+            </div>
+
+        </div>
+
+
+        <!-- Meus dados -->
+
+        <section class="perfil-section">
+
+            <div class="perfil-section-head">
+                <h2>
+                    <i class="fa-solid fa-id-badge"></i>
+                    Meus Dados
+                </h2>
+            </div>
+
+            <div class="data-grid">
+
+                <div class="data-item">
+                    <span>Nome Completo</span>
+                    <strong>Matheus Ferreira Souza</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>CPF</span>
+                    <strong>384.219.760-05</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>Data de Nascimento</span>
+                    <strong>14/03/2001</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>E-mail</span>
+                    <strong>matheus.ferreira@email.com</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>Telefone</span>
+                    <strong>(15) 99812-4477</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>Cidade / UF</span>
+                    <strong>Cerquilho - SP</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>Equipe</span>
+                    <strong>Racing 22</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>Categoria</span>
+                    <strong>Amador</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>Licença CBM</span>
+                    <strong>CBM-04821</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Meus eventos -->
+
+        <section class="perfil-section">
+
+            <div class="perfil-section-head">
+                <h2>
+                    <i class="fa-solid fa-flag-checkered"></i>
+                    Meus Eventos
+                </h2>
+
+                <div class="event-filters">
+                    <button type="button" class="filter-button active" data-filter="todos">Todos</button>
+                    <button type="button" class="filter-button" data-filter="confirmado">Confirmados</button>
+                    <button type="button" class="filter-button" data-filter="pendente">Pendentes</button>
+                    <button type="button" class="filter-button" data-filter="concluido">Concluídos</button>
+                </div>
+            </div>
+
+            <div class="meus-eventos-grid" id="meusEventosGrid">
+
+                <!-- Evento confirmado -->
+
+                <article class="meu-evento-card" data-status="confirmado">
+
+                    <div class="meu-evento-image">
+                        <span class="badge success">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Inscrição Confirmada
+                        </span>
+                        <img src="../imgs/foto 7.png" alt="Evento">
+                    </div>
+
+                    <div class="meu-evento-body">
+
+                        <small>CAMPEONATO PAULISTA</small>
+
+                        <h3>2ª Etapa Porangaba — MX1 • MX2</h3>
+
+                        <ul>
+                            <li>
+                                <i class="fa-regular fa-calendar"></i>
+                                30/08/2026
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Porangaba - SP
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-tag"></i>
+                                Categoria Amador
+                            </li>
+                        </ul>
+
+                        <div class="meu-evento-buttons">
+                            <a href="evento.html" class="btn-dark">
+                                Ver Detalhes
+                            </a>
+                            <button type="button" class="btn-outline-danger" data-cancel-event>
+                                Cancelar Inscrição
+                            </button>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Evento com pagamento pendente -->
+
+                <article class="meu-evento-card" data-status="pendente">
+
+                    <div class="meu-evento-image">
+                        <span class="badge warning">
+                            <i class="fa-solid fa-hourglass-half"></i>
+                            Pagamento Pendente
+                        </span>
+                        <img src="../imgs/foto 8.png" alt="Evento">
+                    </div>
+
+                    <div class="meu-evento-body">
+
+                        <small>COPA REGIONAL ENDURO</small>
+
+                        <h3>3ª Etapa Itapetininga — Enduro FIM</h3>
+
+                        <ul>
+                            <li>
+                                <i class="fa-regular fa-calendar"></i>
+                                21/09/2026
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Itapetininga - SP
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-tag"></i>
+                                Categoria Amador
+                            </li>
+                        </ul>
+
+                        <div class="meu-evento-buttons">
+                            <a href="pagamento.html" class="btn-yellow">
+                                Efetuar Pagamento
+                            </a>
+                            <button type="button" class="btn-outline-danger" data-cancel-event>
+                                Cancelar
+                            </button>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Evento concluído -->
+
+                <article class="meu-evento-card" data-status="concluido">
+
+                    <div class="meu-evento-image">
+                        <span class="badge neutral">
+                            <i class="fa-solid fa-flag-checkered"></i>
+                            Concluído
+                        </span>
+                        <img src="../imgs/foto 10.png" alt="Evento">
+                    </div>
+
+                    <div class="meu-evento-body">
+
+                        <small>CAMPEONATO PAULISTA</small>
+
+                        <h3>1ª Etapa Boituva — MX1 • MX2</h3>
+
+                        <ul>
+                            <li>
+                                <i class="fa-regular fa-calendar"></i>
+                                14/06/2026
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Boituva - SP
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-medal"></i>
+                                Resultado: 4º lugar
+                            </li>
+                        </ul>
+
+                        <div class="meu-evento-buttons">
+                            <a href="evento.html" class="btn-dark">
+                                Ver Resultado
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Evento cancelado -->
+
+                <article class="meu-evento-card" data-status="cancelado">
+
+                    <div class="meu-evento-image">
+                        <span class="badge danger">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                            Cancelada
+                        </span>
+                        <img src="../imgs/foto 11.png" alt="Evento">
+                    </div>
+
+                    <div class="meu-evento-body">
+
+                        <small>DESAFIO VELOCROSS</small>
+
+                        <h3>Etapa Única — Sorocaba</h3>
+
+                        <ul>
+                            <li>
+                                <i class="fa-regular fa-calendar"></i>
+                                02/05/2026
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Sorocaba - SP
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-tag"></i>
+                                Categoria Amador
+                            </li>
+                        </ul>
+
+                        <div class="meu-evento-buttons">
+                            <a href="index.html#eventos" class="btn-dark">
+                                Ver Eventos Abertos
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script>
+        "use strict";
+
+        /* ==========================================================
+            TOAST
+        ========================================================== */
+
+        const Toast = {
+            container: null,
+            init() {
+                this.container = document.createElement("div");
+                this.container.id = "toast-container";
+                document.body.appendChild(this.container);
+            },
+            show(message, type = "success") {
+                if (!this.container) this.init();
+
+                const toast = document.createElement("div");
+                toast.className = `toast ${type}`;
+                toast.innerHTML = `
+                    <div class="toast-icon"><i class="fa-solid ${type === "success" ? "fa-circle-check" : "fa-triangle-exclamation"}"></i></div>
+                    <div class="toast-message">${message}</div>
+                `;
+                this.container.appendChild(toast);
+
+                setTimeout(() => toast.classList.add("show"), 50);
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                    setTimeout(() => toast.remove(), 300);
+                }, 3500);
+            }
+        };
+        Toast.init();
+
+        /* ==========================================================
+            CONTAGEM DOS CARDS PARA AS ESTATÍSTICAS
+        ========================================================== */
+
+        const eventCards = document.querySelectorAll(".meu-evento-card");
+
+        function updateStats() {
+            const visibleAll = document.querySelectorAll(".meu-evento-card:not([data-status='cancelado'])");
+            const confirmados = document.querySelectorAll(".meu-evento-card[data-status='confirmado']");
+            const pendentes = document.querySelectorAll(".meu-evento-card[data-status='pendente']");
+            const concluidos = document.querySelectorAll(".meu-evento-card[data-status='concluido']");
+
+            document.getElementById("statInscritos").textContent =
+                confirmados.length + pendentes.length + concluidos.length;
+            document.getElementById("statConcluidos").textContent = concluidos.length;
+            document.getElementById("statPendentes").textContent = pendentes.length;
+        }
+
+        updateStats();
+
+        /* ==========================================================
+            FILTROS DE EVENTOS
+        ========================================================== */
+
+        const filterButtons = document.querySelectorAll(".filter-button");
+        const grid = document.getElementById("meusEventosGrid");
+
+        filterButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                filterButtons.forEach(b => b.classList.remove("active"));
+                button.classList.add("active");
+
+                const filter = button.dataset.filter;
+                let visibleCount = 0;
+
+                eventCards.forEach(function (card) {
+                    const show = filter === "todos" || card.dataset.status === filter;
+                    card.classList.toggle("is-hidden", !show);
+                    if (show) visibleCount++;
+                });
+
+                const existingEmpty = grid.querySelector(".empty-state");
+                if (existingEmpty) existingEmpty.remove();
+
+                if (visibleCount === 0) {
+                    const empty = document.createElement("div");
+                    empty.className = "empty-state";
+                    empty.innerHTML = `
+                        <i class="fa-solid fa-flag-checkered"></i>
+                        <p>Nenhum evento encontrado para este filtro.</p>
+                    `;
+                    grid.appendChild(empty);
+                }
+            });
+        });
+
+        /* ==========================================================
+            CANCELAR INSCRIÇÃO
+        ========================================================== */
+
+        document.querySelectorAll("[data-cancel-event]").forEach(function (button) {
+            button.addEventListener("click", function () {
+                const card = button.closest(".meu-evento-card");
+                const eventName = card.querySelector("h3").textContent.trim();
+
+                const confirmed = window.confirm(
+                    `Tem certeza que deseja cancelar sua inscrição em "${eventName}"?`
+                );
+                if (!confirmed) return;
+
+                card.dataset.status = "cancelado";
+                card.querySelector(".meu-evento-image .badge").outerHTML = `
+                    <span class="badge danger">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        Cancelada
+                    </span>
+                `;
+                card.querySelector(".meu-evento-buttons").innerHTML = `
+                    <a href="index.html#eventos" class="btn-dark">Ver Eventos Abertos</a>
+                `;
+
+                updateStats();
+
+                const activeFilter = document.querySelector(".filter-button.active").dataset.filter;
+                if (activeFilter !== "todos" && activeFilter !== "cancelado") {
+                    card.classList.add("is-hidden");
+                }
+
+                Toast.show("Inscrição cancelada.", "error");
+            });
+        });
+
+        /* ==========================================================
+            SAIR (LOGOUT)
+        ========================================================== */
+
+        document.getElementById("logoutButton").addEventListener("click", function (e) {
+            e.preventDefault();
+            const confirmed = window.confirm("Deseja realmente sair da sua conta?");
+            if (confirmed) {
+                window.location.href = "portal.html";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
